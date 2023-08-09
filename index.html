@@ -128,21 +128,23 @@
   </div> 
 	
   <!-- 弹窗脚本 -->
-  <script>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
-      const popup = document.getElementById("popup");
+        setTimeout(function () {
+            const popup = document.getElementById("popup");
 
-      // Display the popup when the page is loaded
-      popup.style.display = "flex";
+            // Display the popup after 10 seconds
+            popup.style.display = "flex";
 
-      // Close the popup when clicking anywhere on the page
-      document.addEventListener("click", function (event) {
-        if (event.target === popup) {
-          popup.style.display = "none";
-        }
-      });
+            // Close the popup when clicking anywhere on the page
+            document.addEventListener("click", function (event) {
+                if (event.target === popup) {
+                    popup.style.display = "none";
+                }
+            });
+        }, 10000); // 10000 milliseconds = 10 seconds
     });
-  </script>
+</script>
 
     <!-- 判断浏览器是否屏蔽广告 -->
     <script src="http://demo.jb51.net/js/2015/adview_pic_cpc_cpm_cpa_guanggao_gg_ads_300x250.js" type="text/javascript"></script>
